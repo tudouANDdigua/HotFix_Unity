@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class GameLaunch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        //初始化框架 start
+        this.gameObject.AddComponent<show_fps>();
+        this.gameObject.AddComponent<XluaMgr>();
+        //end
+        XluaMgr.Instance.Init();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        //进入启动逻辑 start
+        XluaMgr.Instance.EnterLuaGame();    
+        //end
     }
 }

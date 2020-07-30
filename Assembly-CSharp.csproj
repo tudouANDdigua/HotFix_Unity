@@ -64,6 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameLaunch.cs" />
+    <Compile Include="Assets\Scripts\managers\XluaMgr.cs" />
+    <Compile Include="Assets\Scripts\utils\BuildUtils.cs" />
+    <Compile Include="Assets\Scripts\utils\DataUtils.cs" />
+    <Compile Include="Assets\Scripts\utils\GameUtility.cs" />
     <Compile Include="Assets\Scripts\utils\show_fps.cs" />
     <Compile Include="Assets\Scripts\utils\Singleton.cs" />
     <Compile Include="Assets\XLua\Src\CodeEmit.cs" />
