@@ -1,0 +1,10 @@
+1.1 Assets下添加文件夹
+	1.AssetsPackage  文件夹，用来放资源, 所有的资源和资源ab打包会放AssetsPackage文件夹下;
+	2.Editor	用于编辑器扩展
+	3.LuaScripts	用来存放开发时候的.lua代码;
+	4.Plugins	存放插件
+	5.Scenes	用于存放我们的场景
+	6.Scripts 用于存放底层和重要的C#脚本
+		1.managers 存放管理类
+		2.utils 存放工具类
+		3.GameLaunch 启动脚本
