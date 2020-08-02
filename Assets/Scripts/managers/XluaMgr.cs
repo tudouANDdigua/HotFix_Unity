@@ -101,4 +101,35 @@ public class XluaMgr : UnitySingleton<XluaMgr>
         SafeDoString(string.Format("package.loaded['{0}'] = nil", scriptName));
         LoadScript(scriptName);
     }
+
+    void Update()
+    {
+        if (this.HasGameStart)
+        {
+            // Lua 解释器加上GC
+            this.luaEnv.Tick();
+            if (Time.frameCount % 100 == 0)
+            {
+                this.luaEnv.FullGc();
+            }
+            // end
+            SafeDoString("main.Update()");
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (this.HasGameStart)
+        {
+            SafeDoString("main.FixedUpdate()");
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (this.HasGameStart)
+        {
+            SafeDoString("main.LateUpdate()");
+        }
+    }
 }
