@@ -10,6 +10,7 @@ public class GameLaunch : MonoBehaviour
         //初始化框架 start
         this.gameObject.AddComponent<show_fps>();
         this.gameObject.AddComponent<XluaMgr>();
+        this.gameObject.AddComponent<ResMgr>();
         //end
         XluaMgr.Instance.Init();
     }
