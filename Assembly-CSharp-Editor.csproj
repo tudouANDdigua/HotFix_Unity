@@ -63,7 +63,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\LuaFileCreate.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\AssetBundleManagerEditor.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\AssetbundleMenuItems.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Build\AssetsPathMappingEditor.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Build\VariantMappingEditor.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Dispatcher\AssetBundleChecker.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Dispatcher\AssetBundleDispatcher.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Dispatcher\AssetBundleDispatcherConfig.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Inspector\AssetBundleDispatcherInspector.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Inspector\AssetBundleInspectorUtils.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\LocalServer\ExecuteInternalMono.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\LocalServer\LaunchAssetBundleServer.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Tools\AssetBundleEditorHelper.cs" />
+    <Compile Include="Assets\Editor\AssetBundle\Tools\AssetBundleImporter.cs" />
+    <Compile Include="Assets\Editor\Common\EditorCoroutines\CoroutineWindowExample.cs" />
+    <Compile Include="Assets\Editor\Common\EditorCoroutines\EditorCoroutineExtensions.cs" />
+    <Compile Include="Assets\Editor\Common\EditorCoroutines\EditorCoroutines.cs" />
+    <Compile Include="Assets\Editor\Common\EditorUtils.cs" />
+    <Compile Include="Assets\Editor\Common\Inspector\GUILayoutUtils.cs" />
+    <Compile Include="Assets\Editor\GameTools\ConfigTools.cs" />
+    <Compile Include="Assets\Editor\PackageBuild\BuildPlayer.cs" />
+    <Compile Include="Assets\Editor\PackageBuild\CheckAssetBundles.cs" />
+    <Compile Include="Assets\Editor\PackageBuild\PackageTool.cs" />
+    <Compile Include="Assets\Editor\PackageBuild\PackageUtils.cs" />
+    <Compile Include="Assets\Editor\XLuaMenu.cs" />
     <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />

@@ -63,6 +63,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AssetBundle\AssetBundleManager.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\AssetAsyncLoader.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\AssetBundleAsyncLoader.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\EditorAssetAsyncLoader.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\EditorAssetBundleAsyncLoader.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\ResourceAsyncOperation.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\AsyncOperation\ResourceWebRequester.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\Config\AssetBundleConfig.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\Config\AssetsPathMapping.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\Config\Manifest.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle\Utility\AssetBundleUtility.cs" />
+    <Compile Include="Assets\Scripts\Channel\AndroidSDKHelper.cs" />
+    <Compile Include="Assets\Scripts\Channel\BaseChannel.cs" />
+    <Compile Include="Assets\Scripts\Channel\ChannelConfig.cs" />
+    <Compile Include="Assets\Scripts\Channel\ChannelManager.cs" />
+    <Compile Include="Assets\Scripts\Channel\implement\TestChannel.cs" />
     <Compile Include="Assets\Scripts\GameLaunch.cs" />
     <Compile Include="Assets\Scripts\managers\ResMgr.cs" />
     <Compile Include="Assets\Scripts\managers\XluaMgr.cs" />
@@ -112,6 +128,7 @@
     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
     <None Include="Assets\XLua\Gen\link.xml" />
+    <None Include="Assets\StreamingAssets\AssetBundles\AssetBundleServerUrl.txt" />
     <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
     <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
     <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />

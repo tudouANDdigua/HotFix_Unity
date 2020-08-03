@@ -1,0 +1,7 @@
+lua.assetbundle,Channel/Lua.bytes
+lua.assetbundle,Lua/componment/LuaBehaviour.lua.bytes
+lua.assetbundle,Lua/game/cube/cube_ctrl.lua.bytes
+lua.assetbundle,Lua/game/start.lua.bytes
+lua.assetbundle,Lua/main.lua.bytes
+lua.assetbundle,Lua/managers/LuaGameObject.lua.bytes
+lua.assetbundle,Lua/managers/ResMgr.lua.bytes

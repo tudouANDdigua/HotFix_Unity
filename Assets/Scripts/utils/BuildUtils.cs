@@ -7,7 +7,7 @@
 
 public class BuildUtils
 {
-    public const string PackageNameFileName = "package_name.bytes";
+    public const string PackageNameFileName = "package_name.bytes";//渠道名字
     public const string AppVersionFileName = "app_version.bytes";
     public const string ResVersionFileName = "res_version.bytes";
     public const string NoticeVersionFileName = "notice_version.bytes";

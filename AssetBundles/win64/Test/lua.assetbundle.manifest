@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 632884033
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 55fd65b63a6fe31178cd1b184510eac9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetsPackage/Lua/main.lua.bytes
+- Assets/AssetsPackage/Lua/managers/LuaGameObject.lua.bytes
+- Assets/AssetsPackage/Lua/game/start.lua.bytes
+- Assets/AssetsPackage/Lua/managers/ResMgr.lua.bytes
+- Assets/AssetsPackage/Lua/componment/LuaBehaviour.lua.bytes
+- Assets/AssetsPackage/Lua/game/cube/cube_ctrl.lua.bytes
+- Assets/AssetsPackage/Channel/Lua.bytes
+Dependencies: []

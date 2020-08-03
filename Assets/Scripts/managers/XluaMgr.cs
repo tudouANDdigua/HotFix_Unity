@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using AssetBundles;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -13,9 +14,17 @@ public class XluaMgr : UnitySingleton<XluaMgr>
     private LuaEnv luaEnv = null;
     private bool HasGameStart = false;//游戏是否启动
 
+    public string AssetbundleName
+    {
+        get;
+        protected set;
+    }
+
     public override void Awake()
     {
         base.Awake();
+        string path = AssetBundleUtility.PackagePathToAssetsPath(luaAssetbundleAssetName);
+        AssetbundleName = AssetBundleUtility.AssetBundlePathToAssetBundleName(path);
     }
 
     public void EnterLuaGame()
@@ -41,7 +50,7 @@ public class XluaMgr : UnitySingleton<XluaMgr>
         string scriptPath = string.Empty;
         filePath = filePath.Replace(".", "/") + ".lua"; // game/game_start.lua
 #if UNITY_EDITOR
-        //if (AssetBundleConfig.IsEditorMode)
+        if (AssetBundleConfig.IsEditorMode)
         {
             scriptPath = Path.Combine(Application.dataPath, luaScriptsFolder);
             scriptPath = Path.Combine(scriptPath, filePath);
@@ -50,26 +59,22 @@ public class XluaMgr : UnitySingleton<XluaMgr>
             return data;
         }
 #endif
-
-        //scriptPath = string.Format("{0}/{1}.bytes", luaAssetbundleAssetName, filePath);
-        //string assetbundleName = null;
-        //string assetName = null;
-
-        //bool status = AssetBundleManager.Instance.MapAssetPath(scriptPath, out assetbundleName, out assetName);
-        //if (!status)
-        //{
-        //    Debug.LogError("MapAssetPath failed : " + scriptPath);
-        //    return null;
-        //}
-
-        //var asset = AssetBundleManager.Instance.GetAssetCache(assetName) as TextAsset;
-        //if (asset != null)
-        //{
-        //    return asset.bytes;
-        //}
-        //Debug.LogError("Load lua script failed : " + scriptPath + ", You should preload lua assetbundle first!!!");
-        //return null;
-
+        scriptPath = string.Format("{0}/{1}.bytes", luaAssetbundleAssetName, filePath);
+        string assetbundleName = null;
+        string assetName = null;
+        bool status = AssetBundleManager.Instance.MapAssetPath(scriptPath, out assetbundleName, out assetName);
+        if (!status)
+        {
+            Debug.LogError("MapAssetPath failed : " + scriptPath);
+            return null;
+        }
+        var asset = AssetBundleManager.Instance.GetAssetCache(assetName) as TextAsset;
+        if (asset != null)
+        {
+            return asset.bytes;
+        }
+        Debug.LogError("Load lua script failed : " + scriptPath + ", You should preload lua assetbundle first!!!");
+        return null;
     }
 
     // 执行脚本, scriptContent脚本代码的文本内容;
